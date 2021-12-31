@@ -44,4 +44,7 @@ public interface ToolDao extends BaseMapper<UserDTO> {
     //新增壁纸文件夹
     @Insert("INSERT INTO wallpaper_folder(folder,note)VALUES(#{folder},#{note})")
     int wallpaperFolderInsertCode(Map<String,Object> param);
+    //跨域链接存储
+    @Insert("INSERT INTO domain (url,value,type,results)VALUES(#{url},#{value},#{type},#{results})")
+    int domainUrlCode(Map<String,Object> param);
 }

@@ -1,5 +1,6 @@
 package com.example.demo.mod;
 
+import cn.hutool.http.HttpUtil;
 import com.example.demo.config.YmlConfig;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mail.SimpleMailMessage;
@@ -113,7 +114,5 @@ public class ToolMod {
         String dates = sdf.format(date);
         return dates;
     }
-    public static void main(String[] args) {
-      ToolMod toolMod = new ToolMod();
-    }
+    public static void main(String[] args) {ToolMod toolMod = new ToolMod();}
 }
