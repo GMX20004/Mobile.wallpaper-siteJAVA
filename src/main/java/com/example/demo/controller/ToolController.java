@@ -224,6 +224,7 @@ public class ToolController {
             Map<String,Object> param = new HashMap<>();
             param.put("url",url);
             param.put("type","GET");
+            param.put("time",toolMod.time());
             results = HttpUtil.get(url);
             if (results.length()>1000){
                 param.put("results",results.substring(0,999));
@@ -247,6 +248,7 @@ public class ToolController {
             param.put("url",url);
             param.put("value",value);
             param.put("type","POST");
+            param.put("time",toolMod.time());
             results = HttpUtil.post(url,value);
             if (results.length()>1000){
                 param.put("results",results.substring(0,999));
